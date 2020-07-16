@@ -1,8 +1,10 @@
 _id: wrk_7a426ecef9bb4d2f971227e749458372
 created: 1594725697849
-description: ""
-modified: 1594728345954
-name: Jikan API 4.0
+description: "[Jikan](https://jikan.moe) is an **Unofficial** MyAnimeList API.
+  It scrapes the website to satisfy the need for an API - which MyAnimeList
+  lacks."
+modified: 1594859876425
+name: Jikan API 4.0.0
 parentId: null
 scope: null
 type: Workspace

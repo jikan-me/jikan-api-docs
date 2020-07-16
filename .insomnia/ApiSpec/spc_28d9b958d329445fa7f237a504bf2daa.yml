@@ -5,12 +5,23 @@ contents: >-
       "openapi": "3.0.0",
       "info": {
           "title": "Jikan API",
+          "description": "[Jikan](https://jikan.moe) is an **Unofficial** MyAnimeList API. It scrapes the website to satisfy the need for an API - which MyAnimeList lacks.",
+          "termsOfService": "https://jikan.moe/terms",
           "contact": {
-              "name": "Support",
               "email": "neko@jikan.moe"
           },
-          "version": "4.0"
+          "license": {
+              "name": "MIT",
+              "url": "https://github.com/jikan-me/jikan-rest/blob/master/LICENSE"
+          },
+          "version": "4.0.0"
       },
+      "servers": [
+          {
+              "url": "https://api.jikan.moe/v4-alpha",
+              "description": "Jikan REST API Alpha"
+          }
+      ],
       "paths": {
           "/anime/{id}": {
               "get": {
@@ -141,7 +152,7 @@ contents: >-
           "/anime/{id}/forum": {
               "get": {
                   "tags": [
-                      "anime forum"
+                      "forum"
                   ],
                   "operationId": "getAnimeTopics",
                   "responses": {
@@ -180,6 +191,132 @@ contents: >-
                   }
               }
           },
+          "/anime/{id}/pictures": {
+              "get": {
+                  "tags": [
+                      "pictures"
+                  ],
+                  "operationId": "getAnimePictures",
+                  "responses": {
+                      "200": {
+                          "description": "Returns a list of anime forum topics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/anime/{id}/statistics": {
+              "get": {
+                  "tags": [
+                      "anime statistics"
+                  ],
+                  "operationId": "getAnimeStatistics",
+                  "responses": {
+                      "200": {
+                          "description": "Returns anime statistics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/anime/{id}/moreinfo": {
+              "get": {
+                  "tags": [
+                      "moreinfo"
+                  ],
+                  "operationId": "getAnimeMoreInfo",
+                  "responses": {
+                      "200": {
+                          "description": "Returns anime statistics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/anime/{id}/recommendations": {
+              "get": {
+                  "tags": [
+                      "recommendations"
+                  ],
+                  "operationId": "getAnimeRecommendations",
+                  "responses": {
+                      "200": {
+                          "description": "Returns anime recommendations",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/anime/{id}/userupdates": {
+              "get": {
+                  "tags": [
+                      "anime userupdates"
+                  ],
+                  "operationId": "getAnimeUserUpdates",
+                  "responses": {
+                      "200": {
+                          "description": "Returns anime recommendations",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/anime/{id}/reviews": {
+              "get": {
+                  "tags": [
+                      "anime reviews"
+                  ],
+                  "operationId": "getAnimeReviews",
+                  "responses": {
+                      "200": {
+                          "description": "Returns anime reviews",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
           "/characters/{id}": {
               "get": {
                   "tags": [
@@ -189,6 +326,27 @@ contents: >-
                   "responses": {
                       "200": {
                           "description": "Returns manga resource",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/characters/{id}/pictures": {
+              "get": {
+                  "tags": [
+                      "pictures"
+                  ],
+                  "operationId": "getCharacterPictures",
+                  "responses": {
+                      "200": {
+                          "description": "Returns a list of pictures of the character",
                           "content": {
                               "application/json": {
                                   "schema": {}
@@ -222,6 +380,195 @@ contents: >-
                   }
               }
           },
+          "/manga/{id}/characters": {
+              "get": {
+                  "tags": [
+                      "manga characters"
+                  ],
+                  "operationId": "getMangaCharacters",
+                  "responses": {
+                      "200": {
+                          "description": "Returns manga characters resource",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/news": {
+              "get": {
+                  "tags": [
+                      "manga news"
+                  ],
+                  "operationId": "getMangaNews",
+                  "responses": {
+                      "200": {
+                          "description": "Returns a list of manga news topics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/forum": {
+              "get": {
+                  "tags": [
+                      "forum"
+                  ],
+                  "operationId": "getMangaTopics",
+                  "responses": {
+                      "200": {
+                          "description": "Returns a list of manga forum topics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/pictures": {
+              "get": {
+                  "tags": [
+                      "pictures"
+                  ],
+                  "operationId": "getMangaPictures",
+                  "responses": {
+                      "200": {
+                          "description": "Returns a list of manga forum topics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/statistics": {
+              "get": {
+                  "tags": [
+                      "manga statistics"
+                  ],
+                  "operationId": "getMangaStatistics",
+                  "responses": {
+                      "200": {
+                          "description": "Returns anime statistics",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/moreinfo": {
+              "get": {
+                  "tags": [
+                      "moreinfo"
+                  ],
+                  "operationId": "getMangaMoreInfo",
+                  "responses": {
+                      "200": {
+                          "description": "Returns manga moreinfo",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/recommendations": {
+              "get": {
+                  "tags": [
+                      "recommendations"
+                  ],
+                  "operationId": "getMangaRecommendations",
+                  "responses": {
+                      "200": {
+                          "description": "Returns manga recommendations",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/userupdates": {
+              "get": {
+                  "tags": [
+                      "manga userupdates"
+                  ],
+                  "operationId": "getMangaUserUpdates",
+                  "responses": {
+                      "200": {
+                          "description": "Returns manga user updates",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga/{id}/reviews": {
+              "get": {
+                  "tags": [
+                      "manga reviews"
+                  ],
+                  "operationId": "getMangaReviews",
+                  "responses": {
+                      "200": {
+                          "description": "Returns manga reviews",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
           "/people/{id}": {
               "get": {
                   "tags": [
@@ -231,6 +578,174 @@ contents: >-
                   "responses": {
                       "200": {
                           "description": "Returns person resource",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/people/{id}/pictures": {
+              "get": {
+                  "tags": [
+                      "pictures"
+                  ],
+                  "operationId": "getPersonPictures",
+                  "responses": {
+                      "200": {
+                          "description": "Returns a list of pictures of the person",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/anime": {
+              "get": {
+                  "tags": [
+                      "anime search"
+                  ],
+                  "operationId": "getAnimeSearch",
+                  "responses": {
+                      "200": {
+                          "description": "Returns search results for anime",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/manga": {
+              "get": {
+                  "tags": [
+                      "manga search"
+                  ],
+                  "operationId": "getMangaSearch",
+                  "responses": {
+                      "200": {
+                          "description": "Returns search results for manga",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/people": {
+              "get": {
+                  "tags": [
+                      "people search"
+                  ],
+                  "operationId": "getPeopleSearch",
+                  "responses": {
+                      "200": {
+                          "description": "Returns search results for people",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/characters": {
+              "get": {
+                  "tags": [
+                      "characters search"
+                  ],
+                  "operationId": "getCharactersSearch",
+                  "responses": {
+                      "200": {
+                          "description": "Returns search results for characters",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/users": {
+              "get": {
+                  "tags": [
+                      "users search"
+                  ],
+                  "operationId": "getUsersSearch",
+                  "responses": {
+                      "200": {
+                          "description": "Returns search results for users",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/userbyid": {
+              "get": {
+                  "tags": [
+                      "user by id search"
+                  ],
+                  "operationId": "getUserById",
+                  "responses": {
+                      "200": {
+                          "description": "Returns username by ID search",
+                          "content": {
+                              "application/json": {
+                                  "schema": {}
+                              }
+                          }
+                      },
+                      "400": {
+                          "description": "Error: Bad request. When required parameters were not supplied."
+                      }
+                  }
+              }
+          },
+          "/clubs": {
+              "get": {
+                  "tags": [
+                      "clubs search"
+                  ],
+                  "operationId": "getClubsSearch",
+                  "responses": {
+                      "200": {
+                          "description": "Returns search results for clubs",
                           "content": {
                               "application/json": {
                                   "schema": {}
@@ -323,181 +838,26 @@ contents: >-
                                   "$ref": "#/components/schemas/pagination"
                               },
                               {
-                                  "properties": {
-                                      "results": {
-                                          "type": "array",
-                                          "items": {
-                                              "properties": {
-                                                  "mal_id": {
-                                                      "description": "MyAnimeList ID",
-                                                      "type": "integer"
-                                                  },
-                                                  "url": {
-                                                      "description": "MyAnimeList URL",
-                                                      "type": "string"
-                                                  },
-                                                  "title": {
-                                                      "description": "Title",
-                                                      "type": "string"
-                                                  },
-                                                  "date": {
-                                                      "description": "Post Date ISO8601",
-                                                      "type": "string"
-                                                  },
-                                                  "author_username": {
-                                                      "description": "Author MyAnimeList Username",
-                                                      "type": "string"
-                                                  },
-                                                  "author_url": {
-                                                      "description": "Author Profile URL",
-                                                      "type": "string"
-                                                  },
-                                                  "forum_url": {
-                                                      "description": "Forum topic URL",
-                                                      "type": "string"
-                                                  },
-                                                  "image_url": {
-                                                      "description": "Image URL",
-                                                      "type": "string"
-                                                  },
-                                                  "comments": {
-                                                      "description": "Comment count",
-                                                      "type": "integer"
-                                                  },
-                                                  "excerpt": {
-                                                      "description": "Excerpt",
-                                                      "type": "string"
-                                                  }
-                                              },
-                                              "type": "object"
-                                          }
-                                      }
-                                  },
-                                  "type": "object"
+                                  "$ref": "#/components/schemas/news"
                               }
                           ]
                       }
                   },
                   "type": "object"
               },
-              "anime forum": {
-                  "description": "Anime Forum Resource",
+              "manga news": {
+                  "description": "Manga News Resource",
                   "properties": {
                       "data": {
-                          "type": "array",
-                          "items": {
-                              "properties": {
-                                  "mal_id": {
-                                      "description": "MyAnimeList ID",
-                                      "type": "integer"
-                                  },
-                                  "url": {
-                                      "description": "MyAnimeList URL",
-                                      "type": "string"
-                                  },
-                                  "title": {
-                                      "description": "Title",
-                                      "type": "string"
-                                  },
-                                  "date": {
-                                      "description": "Post Date ISO8601",
-                                      "type": "string"
-                                  },
-                                  "author_username": {
-                                      "description": "Author MyAnimeList Username",
-                                      "type": "string"
-                                  },
-                                  "author_url": {
-                                      "description": "Author Profile URL",
-                                      "type": "string"
-                                  },
-                                  "comments": {
-                                      "description": "Comment count",
-                                      "type": "integer"
-                                  },
-                                  "last_comment": {
-                                      "description": "Last comment details",
-                                      "properties": {
-                                          "url": {
-                                              "description": "Last comment URL",
-                                              "type": "string"
-                                          },
-                                          "author_username": {
-                                              "description": "Author MyAnimeList Username",
-                                              "type": "string"
-                                          },
-                                          "author_url": {
-                                              "description": "Author Profile URL",
-                                              "type": "string"
-                                          },
-                                          "date": {
-                                              "description": "Last comment date posted ISO8601",
-                                              "type": "string"
-                                          }
-                                      },
-                                      "type": "object"
-                                  }
+                          "type": "object",
+                          "allOf": [
+                              {
+                                  "$ref": "#/components/schemas/pagination"
                               },
-                              "type": "object"
-                          }
-                      }
-                  },
-                  "type": "object"
-              },
-              "anime videos": {
-                  "description": "Anime Videos Resource",
-                  "properties": {
-                      "data": {
-                          "properties": {
-                              "promos": {
-                                  "type": "array",
-                                  "items": {
-                                      "properties": {
-                                          "title": {
-                                              "description": "Title",
-                                              "type": "string"
-                                          },
-                                          "image_url": {
-                                              "description": "Image URL",
-                                              "type": "string"
-                                          },
-                                          "trailer": {
-                                              "$ref": "#/components/schemas/trailer"
-                                          }
-                                      },
-                                      "type": "object"
-                                  }
-                              },
-                              "episodes": {
-                                  "type": "array",
-                                  "items": {
-                                      "properties": {
-                                          "mal_id": {
-                                              "description": "MyAnimeList ID",
-                                              "type": "integer"
-                                          },
-                                          "url": {
-                                              "description": "MyAnimeList URL",
-                                              "type": "string"
-                                          },
-                                          "title": {
-                                              "description": "Title",
-                                              "type": "string"
-                                          },
-                                          "episode": {
-                                              "description": "Episode",
-                                              "type": "string"
-                                          },
-                                          "image_url": {
-                                              "description": "Image URL",
-                                              "type": "string"
-                                          }
-                                      },
-                                      "type": "object"
-                                  }
+                              {
+                                  "$ref": "#/components/schemas/news"
                               }
-                          },
-                          "type": "object"
+                          ]
                       }
                   },
                   "type": "object"
@@ -554,6 +914,24 @@ contents: >-
                               },
                               "type": "object"
                           }
+                      }
+                  },
+                  "type": "object"
+              },
+              "anime search": {
+                  "description": "Anime Search Resource",
+                  "properties": {
+                      "data": {
+                          "description": "The resource that this resource collects.",
+                          "type": "object",
+                          "allOf": [
+                              {
+                                  "$ref": "#/components/schemas/pagination"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/anime"
+                              }
+                          ]
                       }
                   },
                   "type": "object"
@@ -865,6 +1243,142 @@ contents: >-
                               },
                               "type": "object"
                           }
+                      }
+                  },
+                  "type": "object"
+              },
+              "anime statistics": {
+                  "description": "Anime Statistics Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "properties": {
+                              "watching": {
+                                  "description": "Number of users watching the resource",
+                                  "type": "integer"
+                              },
+                              "completed": {
+                                  "description": "Number of users who have completed the resource",
+                                  "type": "integer"
+                              },
+                              "on_hold": {
+                                  "description": "Number of users who have put the resource on hold",
+                                  "type": "integer"
+                              },
+                              "dropped": {
+                                  "description": "Number of users who have dropped the resource",
+                                  "type": "integer"
+                              },
+                              "plan_to_watch": {
+                                  "description": "Number of users who have planned to watch the resource",
+                                  "type": "integer"
+                              },
+                              "total": {
+                                  "description": "Total number of users who have the resource added to their lists",
+                                  "type": "integer"
+                              },
+                              "scores": {
+                                  "description": "Transform the resource into an array.",
+                                  "type": "array",
+                                  "items": {
+                                      "properties": {
+                                          "score": {
+                                              "description": "The number Score",
+                                              "type": "integer"
+                                          },
+                                          "votes": {
+                                              "description": "Number of votes for this score",
+                                              "type": "integer"
+                                          },
+                                          "percentage": {
+                                              "description": "Percentage of votes for this score",
+                                              "type": "float"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              }
+                          },
+                          "type": "object"
+                      }
+                  },
+                  "type": "object"
+              },
+              "anime videos": {
+                  "description": "Anime Videos Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "properties": {
+                              "promos": {
+                                  "description": "Transform the resource into an array.",
+                                  "type": "array",
+                                  "items": {
+                                      "properties": {
+                                          "title": {
+                                              "description": "Title",
+                                              "type": "string"
+                                          },
+                                          "image_url": {
+                                              "description": "Image URL",
+                                              "type": "string"
+                                          },
+                                          "trailer": {
+                                              "$ref": "#/components/schemas/trailer"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              },
+                              "episodes": {
+                                  "description": "Transform the resource into an array.",
+                                  "type": "array",
+                                  "items": {
+                                      "properties": {
+                                          "mal_id": {
+                                              "description": "MyAnimeList ID",
+                                              "type": "integer"
+                                          },
+                                          "url": {
+                                              "description": "MyAnimeList URL",
+                                              "type": "string"
+                                          },
+                                          "title": {
+                                              "description": "Title",
+                                              "type": "string"
+                                          },
+                                          "episode": {
+                                              "description": "Episode",
+                                              "type": "string"
+                                          },
+                                          "image_url": {
+                                              "description": "Image URL",
+                                              "type": "string"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              }
+                          },
+                          "type": "object"
+                      }
+                  },
+                  "type": "object"
+              },
+              "characters search": {
+                  "description": "Characters Search Resource",
+                  "properties": {
+                      "data": {
+                          "description": "The resource that this resource collects.",
+                          "type": "object",
+                          "allOf": [
+                              {
+                                  "$ref": "#/components/schemas/pagination"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/character"
+                              }
+                          ]
                       }
                   },
                   "type": "object"
@@ -1181,6 +1695,177 @@ contents: >-
                   },
                   "type": "object"
               },
+              "news": {
+                  "properties": {
+                      "results": {
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "mal_id": {
+                                      "description": "MyAnimeList ID",
+                                      "type": "integer"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "title": {
+                                      "description": "Title",
+                                      "type": "string"
+                                  },
+                                  "date": {
+                                      "description": "Post Date ISO8601",
+                                      "type": "string"
+                                  },
+                                  "author_username": {
+                                      "description": "Author MyAnimeList Username",
+                                      "type": "string"
+                                  },
+                                  "author_url": {
+                                      "description": "Author Profile URL",
+                                      "type": "string"
+                                  },
+                                  "forum_url": {
+                                      "description": "Forum topic URL",
+                                      "type": "string"
+                                  },
+                                  "image_url": {
+                                      "description": "Image URL",
+                                      "type": "string"
+                                  },
+                                  "comments": {
+                                      "description": "Comment count",
+                                      "type": "integer"
+                                  },
+                                  "excerpt": {
+                                      "description": "Excerpt",
+                                      "type": "string"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "forum": {
+                  "description": "Forum Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "mal_id": {
+                                      "description": "MyAnimeList ID",
+                                      "type": "integer"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "title": {
+                                      "description": "Title",
+                                      "type": "string"
+                                  },
+                                  "date": {
+                                      "description": "Post Date ISO8601",
+                                      "type": "string"
+                                  },
+                                  "author_username": {
+                                      "description": "Author MyAnimeList Username",
+                                      "type": "string"
+                                  },
+                                  "author_url": {
+                                      "description": "Author Profile URL",
+                                      "type": "string"
+                                  },
+                                  "comments": {
+                                      "description": "Comment count",
+                                      "type": "integer"
+                                  },
+                                  "last_comment": {
+                                      "description": "Last comment details",
+                                      "properties": {
+                                          "url": {
+                                              "description": "Last comment URL",
+                                              "type": "string"
+                                          },
+                                          "author_username": {
+                                              "description": "Author MyAnimeList Username",
+                                              "type": "string"
+                                          },
+                                          "author_url": {
+                                              "description": "Author Profile URL",
+                                              "type": "string"
+                                          },
+                                          "date": {
+                                              "description": "Last comment date posted ISO8601",
+                                              "type": "string"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "manga characters": {
+                  "description": "Manga Characters Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "mal_id": {
+                                      "description": "MyAnimeList ID",
+                                      "type": "integer"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "image_url": {
+                                      "description": "Image URL",
+                                      "type": "string"
+                                  },
+                                  "name": {
+                                      "description": "Character Name",
+                                      "type": "string"
+                                  },
+                                  "role": {
+                                      "description": "Character's Role",
+                                      "type": "string"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "manga search": {
+                  "description": "Manga Search Resource",
+                  "properties": {
+                      "data": {
+                          "description": "The resource that this resource collects.",
+                          "type": "object",
+                          "allOf": [
+                              {
+                                  "$ref": "#/components/schemas/pagination"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/manga"
+                              }
+                          ]
+                      }
+                  },
+                  "type": "object"
+              },
               "manga": {
                   "description": "Manga Resource",
                   "properties": {
@@ -1354,6 +2039,97 @@ contents: >-
                   },
                   "type": "object"
               },
+              "manga statistics": {
+                  "description": "Manga Statistics Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "properties": {
+                              "reading": {
+                                  "description": "Number of users reading the resource",
+                                  "type": "integer"
+                              },
+                              "completed": {
+                                  "description": "Number of users who have completed the resource",
+                                  "type": "integer"
+                              },
+                              "on_hold": {
+                                  "description": "Number of users who have put the resource on hold",
+                                  "type": "integer"
+                              },
+                              "dropped": {
+                                  "description": "Number of users who have dropped the resource",
+                                  "type": "integer"
+                              },
+                              "plan_to_read": {
+                                  "description": "Number of users who have planned to read the resource",
+                                  "type": "integer"
+                              },
+                              "total": {
+                                  "description": "Total number of users who have the resource added to their lists",
+                                  "type": "integer"
+                              },
+                              "scores": {
+                                  "description": "Transform the resource into an array.",
+                                  "type": "array",
+                                  "items": {
+                                      "properties": {
+                                          "score": {
+                                              "description": "The number Score",
+                                              "type": "integer"
+                                          },
+                                          "votes": {
+                                              "description": "Number of votes for this score",
+                                              "type": "integer"
+                                          },
+                                          "percentage": {
+                                              "description": "Percentage of votes for this score",
+                                              "type": "float"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              }
+                          },
+                          "type": "object"
+                      }
+                  },
+                  "type": "object"
+              },
+              "moreinfo": {
+                  "description": "More Info Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "properties": {
+                              "moreinfo": {
+                                  "description": "Additional information on the entry",
+                                  "type": "string"
+                              }
+                          },
+                          "type": "object"
+                      }
+                  },
+                  "type": "object"
+              },
+              "people search": {
+                  "description": "People Search Resource",
+                  "properties": {
+                      "data": {
+                          "description": "The resource that this resource collects.",
+                          "type": "object",
+                          "allOf": [
+                              {
+                                  "$ref": "#/components/schemas/pagination"
+                              },
+                              {
+                                  "$ref": "#/components/schemas/person"
+                              }
+                          ]
+                      }
+                  },
+                  "type": "object"
+              },
               "person": {
                   "description": "Person Resource",
                   "properties": {
@@ -1476,12 +2252,375 @@ contents: >-
                       }
                   },
                   "type": "object"
+              },
+              "pictures": {
+                  "description": "Pictures Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "properties": {
+                              "jpg": {
+                                  "description": "Transform the resource into an array.",
+                                  "type": "array",
+                                  "items": {
+                                      "properties": {
+                                          "image_url": {
+                                              "description": "Default JPG Image Size URL",
+                                              "type": "string"
+                                          },
+                                          "large_image_url": {
+                                              "description": "Large JPG Image Size URL",
+                                              "type": "string"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              },
+                              "webp": {
+                                  "description": "Transform the resource into an array.",
+                                  "type": "array",
+                                  "items": {
+                                      "properties": {
+                                          "image_url": {
+                                              "description": "Default JPG Image Size URL",
+                                              "type": "string"
+                                          },
+                                          "large_image_url": {
+                                              "description": "Large JPG Image Size URL",
+                                              "type": "string"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              }
+                          },
+                          "type": "object"
+                      }
+                  },
+                  "type": "object"
+              },
+              "recommendations": {
+                  "description": "Recommendations Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "mal_id": {
+                                      "description": "Recommended MyAnimeList ID",
+                                      "type": "integer"
+                                  },
+                                  "url": {
+                                      "description": "Recommended MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "recommendation_url": {
+                                      "description": "Recommendation MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "title": {
+                                      "description": "Recommended Entry Title",
+                                      "type": "string"
+                                  },
+                                  "recommendation_count": {
+                                      "description": "Number of users who have recommended this entry",
+                                      "type": "integer"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "anime reviews": {
+                  "description": "Anime Reviews Resource",
+                  "properties": {
+                      "data": {
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "mal_id": {
+                                      "description": "MyAnimeList ID",
+                                      "type": "integer"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "type": {
+                                      "description": "Entry Type",
+                                      "type": "string"
+                                  },
+                                  "votes": {
+                                      "description": "Number of user votes on the Review",
+                                      "type": "integer"
+                                  },
+                                  "date": {
+                                      "description": "Review created date ISO8601",
+                                      "type": "string"
+                                  },
+                                  "scores": {
+                                      "description": "Review Scores breakdown",
+                                      "properties": {
+                                          "overall": {
+                                              "description": "Overall Score",
+                                              "type": "integer"
+                                          },
+                                          "story": {
+                                              "description": "Story Score",
+                                              "type": "integer"
+                                          },
+                                          "animation": {
+                                              "description": "Animation Score",
+                                              "type": "integer"
+                                          },
+                                          "sound": {
+                                              "description": "Sound Score",
+                                              "type": "integer"
+                                          },
+                                          "character": {
+                                              "description": "Character Score",
+                                              "type": "integer"
+                                          },
+                                          "enjoyment": {
+                                              "description": "Enjoyment Score",
+                                              "type": "integer"
+                                          }
+                                      },
+                                      "type": "object"
+                                  },
+                                  "review": {
+                                      "description": "Review content",
+                                      "type": "string"
+                                  },
+                                  "reviewer": {
+                                      "description": "Reviewer details",
+                                      "properties": {
+                                          "username": {
+                                              "description": "MyAnimeList Username",
+                                              "type": "string"
+                                          },
+                                          "url": {
+                                              "description": "MyAnimeList Profile URL",
+                                              "type": "string"
+                                          },
+                                          "image_url": {
+                                              "description": "User Display Picture Image URL",
+                                              "type": "string"
+                                          },
+                                          "episodes_seen": {
+                                              "description": "Number of episodes seen",
+                                              "type": "integer"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "manga reviews": {
+                  "description": "Manga Reviews Resource",
+                  "properties": {
+                      "data": {
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "mal_id": {
+                                      "description": "MyAnimeList ID",
+                                      "type": "integer"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "type": {
+                                      "description": "Entry Type",
+                                      "type": "string"
+                                  },
+                                  "votes": {
+                                      "description": "Number of user votes on the Review",
+                                      "type": "integer"
+                                  },
+                                  "date": {
+                                      "description": "Review created date ISO8601",
+                                      "type": "string"
+                                  },
+                                  "scores": {
+                                      "description": "Review Scores breakdown",
+                                      "properties": {
+                                          "overall": {
+                                              "description": "Overall Score",
+                                              "type": "integer"
+                                          },
+                                          "story": {
+                                              "description": "Story Score",
+                                              "type": "integer"
+                                          },
+                                          "art": {
+                                              "description": "Art Score",
+                                              "type": "integer"
+                                          },
+                                          "character": {
+                                              "description": "Character Score",
+                                              "type": "integer"
+                                          },
+                                          "enjoyment": {
+                                              "description": "Enjoyment Score",
+                                              "type": "integer"
+                                          }
+                                      },
+                                      "type": "object"
+                                  },
+                                  "review": {
+                                      "description": "Review content",
+                                      "type": "string"
+                                  },
+                                  "reviewer": {
+                                      "description": "Reviewer details",
+                                      "properties": {
+                                          "username": {
+                                              "description": "MyAnimeList Username",
+                                              "type": "string"
+                                          },
+                                          "url": {
+                                              "description": "MyAnimeList Profile URL",
+                                              "type": "string"
+                                          },
+                                          "image_url": {
+                                              "description": "User Display Picture Image URL",
+                                              "type": "string"
+                                          },
+                                          "episodes_seen": {
+                                              "description": "Number of episodes seen",
+                                              "type": "integer"
+                                          }
+                                      },
+                                      "type": "object"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "anime userupdates": {
+                  "description": "Anime User Updates Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "username": {
+                                      "description": "MyAnimeList Username",
+                                      "type": "string"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "image_url": {
+                                      "description": "Image URL",
+                                      "type": "string"
+                                  },
+                                  "score": {
+                                      "description": "User Score",
+                                      "type": "integer"
+                                  },
+                                  "status": {
+                                      "description": "User list status",
+                                      "type": "string"
+                                  },
+                                  "episodes_seen": {
+                                      "description": "Number of episodes seen",
+                                      "type": "integer"
+                                  },
+                                  "episodes_total": {
+                                      "description": "Total number of episodes",
+                                      "type": "integer"
+                                  },
+                                  "date": {
+                                      "description": "Last updated date ISO8601",
+                                      "type": "string"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
+              },
+              "manga userupdates": {
+                  "description": "Manga User Updates Resource",
+                  "properties": {
+                      "data": {
+                          "description": "Transform the resource into an array.",
+                          "type": "array",
+                          "items": {
+                              "properties": {
+                                  "username": {
+                                      "description": "MyAnimeList Username",
+                                      "type": "string"
+                                  },
+                                  "url": {
+                                      "description": "MyAnimeList URL",
+                                      "type": "string"
+                                  },
+                                  "image_url": {
+                                      "description": "Image URL",
+                                      "type": "string"
+                                  },
+                                  "score": {
+                                      "description": "User Score",
+                                      "type": "integer"
+                                  },
+                                  "status": {
+                                      "description": "User list status",
+                                      "type": "string"
+                                  },
+                                  "volumes_read": {
+                                      "description": "Number of volumes read",
+                                      "type": "integer"
+                                  },
+                                  "volumes_total": {
+                                      "description": "Total number of volumes",
+                                      "type": "integer"
+                                  },
+                                  "chapters_read": {
+                                      "description": "Number of chapters read",
+                                      "type": "integer"
+                                  },
+                                  "chapters_total": {
+                                      "description": "Total number of chapters",
+                                      "type": "integer"
+                                  },
+                                  "date": {
+                                      "description": "Last updated date ISO8601",
+                                      "type": "string"
+                                  }
+                              },
+                              "type": "object"
+                          }
+                      }
+                  },
+                  "type": "object"
               }
           }
+      },
+      "externalDocs": {
+          "description": "Find out more about Jikan",
+          "url": "https://jikan.moe"
       }
   }
 created: 1594725697850
 fileName: Jikan
-modified: 1594753003772
+modified: 1594859876448
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 type: ApiSpec

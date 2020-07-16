@@ -1,14 +1,14 @@
-_id: req_wrk_7a426ecef9bb4d2f971227e749458372b7663bec
+_id: req_wrk_7a426ecef9bb4d2f971227e7494583729efddc92
 authentication: {}
 body: {}
-created: 1594725697871
+created: 1594859875837
 description: ""
 headers: []
 isPrivate: false
-metaSortKey: -1594725697871
+metaSortKey: -1594859875837
 method: GET
-modified: 1594859876376
-name: /anime/{id}
+modified: 1594859875837
+name: /manga/{id}/userupdates
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 settingDisableRenderRequestBody: false
@@ -18,4 +18,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/anime/{{ id }}"
+url: "{{ base_url }}/manga/{{ id }}/userupdates"

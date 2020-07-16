@@ -1,14 +1,14 @@
-_id: req_wrk_7a426ecef9bb4d2f971227e749458372b7663bec
+_id: req_wrk_7a426ecef9bb4d2f971227e74945837286d4a930
 authentication: {}
 body: {}
-created: 1594725697871
+created: 1594852818731
 description: ""
 headers: []
 isPrivate: false
-metaSortKey: -1594725697871
+metaSortKey: -1594852818731
 method: GET
-modified: 1594859876376
-name: /anime/{id}
+modified: 1594859876245
+name: /anime/{id}/pictures
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 settingDisableRenderRequestBody: false
@@ -18,4 +18,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/anime/{{ id }}"
+url: "{{ base_url }}/anime/{{ id }}/pictures"
