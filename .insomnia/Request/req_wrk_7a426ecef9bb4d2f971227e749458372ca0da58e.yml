@@ -1,0 +1,21 @@
+_id: req_wrk_7a426ecef9bb4d2f971227e749458372ca0da58e
+authentication: {}
+body: {}
+created: 1595111109065
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1595111109065
+method: GET
+modified: 1595111109065
+name: /genres/anime/{id}
+parameters: []
+parentId: wrk_7a426ecef9bb4d2f971227e749458372
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/genres/anime/{{ id }}"

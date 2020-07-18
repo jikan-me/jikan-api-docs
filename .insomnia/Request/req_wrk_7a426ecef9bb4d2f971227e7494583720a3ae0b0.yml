@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594859876120
 method: GET
-modified: 1594859876120
+modified: 1595111109156
 name: /characters/{id}/pictures
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

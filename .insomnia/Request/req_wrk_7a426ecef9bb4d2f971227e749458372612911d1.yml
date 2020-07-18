@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594859876013
 method: GET
-modified: 1594859876013
+modified: 1595111108801
 name: /manga/{id}/forum
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

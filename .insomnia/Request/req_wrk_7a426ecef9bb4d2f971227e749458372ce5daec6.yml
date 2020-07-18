@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594852818654
 method: GET
-modified: 1594859876198
+modified: 1595111109256
 name: /anime/{id}/recommendations
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

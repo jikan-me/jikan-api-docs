@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594838426771
 method: GET
-modified: 1594859876361
+modified: 1595111109514
 name: /anime/{id}/characters
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

@@ -1,0 +1,21 @@
+_id: req_wrk_7a426ecef9bb4d2f971227e74945837279709d3f
+authentication: {}
+body: {}
+created: 1595111107761
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1595111107761
+method: GET
+modified: 1595111107761
+name: /users/{username}/history/{type}
+parameters: []
+parentId: wrk_7a426ecef9bb4d2f971227e749458372
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/users/{{ username }}/history/{{ type }}"

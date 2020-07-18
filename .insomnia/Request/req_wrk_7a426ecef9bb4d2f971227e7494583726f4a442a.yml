@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594852818644
 method: GET
-modified: 1594859876187
+modified: 1595111109229
 name: /anime/{id}/userupdates
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

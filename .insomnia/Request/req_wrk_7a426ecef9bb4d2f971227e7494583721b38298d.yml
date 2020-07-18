@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594838426606
 method: GET
-modified: 1594859876296
+modified: 1595111109402
 name: /anime/{id}/news
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

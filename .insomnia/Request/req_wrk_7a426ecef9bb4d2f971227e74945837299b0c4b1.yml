@@ -1,0 +1,21 @@
+_id: req_wrk_7a426ecef9bb4d2f971227e74945837299b0c4b1
+authentication: {}
+body: {}
+created: 1595111107770
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1595111107770
+method: GET
+modified: 1595111107770
+name: /users/{username}
+parameters: []
+parentId: wrk_7a426ecef9bb4d2f971227e749458372
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/users/{{ username }}"

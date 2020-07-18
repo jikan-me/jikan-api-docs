@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594838426625
 method: GET
-modified: 1594859876326
+modified: 1595111109461
 name: /anime/{id}/episodes/{mal_id}
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

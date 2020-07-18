@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594838426597
 method: GET
-modified: 1594859876281
+modified: 1595111109385
 name: /anime/{id}/forum
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

@@ -1,0 +1,21 @@
+_id: req_wrk_7a426ecef9bb4d2f971227e74945837254d530b9
+authentication: {}
+body: {}
+created: 1595111107753
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1595111107753
+method: GET
+modified: 1595111107753
+name: /users/{username}/friends
+parameters: []
+parentId: wrk_7a426ecef9bb4d2f971227e749458372
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/users/{{ username }}/friends"

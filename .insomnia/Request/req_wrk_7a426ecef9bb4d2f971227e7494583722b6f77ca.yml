@@ -1,0 +1,21 @@
+_id: req_wrk_7a426ecef9bb4d2f971227e7494583722b6f77ca
+authentication: {}
+body: {}
+created: 1595111108028
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1595111108028
+method: GET
+modified: 1595111108028
+name: /seasons/{year}/{season}
+parameters: []
+parentId: wrk_7a426ecef9bb4d2f971227e749458372
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/seasons/{{ year }}/{{ season }}"

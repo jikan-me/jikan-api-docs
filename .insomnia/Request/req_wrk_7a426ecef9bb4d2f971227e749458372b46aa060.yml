@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594859875922
 method: GET
-modified: 1594859875922
+modified: 1595111108736
 name: /manga/{id}/moreinfo
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

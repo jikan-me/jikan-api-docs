@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594859875983
 method: GET
-modified: 1594859875983
+modified: 1595111108786
 name: /manga/{id}/pictures
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372

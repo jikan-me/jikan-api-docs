@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1594852818703
 method: GET
-modified: 1594859876228
+modified: 1595111109301
 name: /anime/{id}/statistics
 parameters: []
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
