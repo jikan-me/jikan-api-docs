@@ -2418,7 +2418,7 @@ contents: >-
                       },
                       "score": {
                           "description": "Score",
-                          "type": "float"
+                          "type": "number"
                       },
                       "scored_by": {
                           "description": "Number of users",
@@ -2594,7 +2594,7 @@ contents: >-
                                           },
                                           "percentage": {
                                               "description": "Percentage of votes for this score",
-                                              "type": "float"
+                                              "type": "number"
                                           }
                                       },
                                       "type": "object"
@@ -3679,7 +3679,7 @@ contents: >-
                       },
                       "score": {
                           "description": "Score",
-                          "type": "float"
+                          "type": "number"
                       },
                       "scored_by": {
                           "description": "Number of users",
@@ -3784,7 +3784,7 @@ contents: >-
                                           },
                                           "percentage": {
                                               "description": "Percentage of votes for this score",
-                                              "type": "float"
+                                              "type": "number"
                                           }
                                       },
                                       "type": "object"
@@ -4181,11 +4181,11 @@ contents: >-
                                       "properties": {
                                           "days_watched": {
                                               "description": "Number of days spent watching Anime",
-                                              "type": "float"
+                                              "type": "number"
                                           },
                                           "mean_score": {
                                               "description": "Mean Score",
-                                              "type": "float"
+                                              "type": "number"
                                           },
                                           "watching": {
                                               "description": "Anime Watching",
@@ -4227,11 +4227,11 @@ contents: >-
                                       "properties": {
                                           "days_read": {
                                               "description": "Number of days spent reading Manga",
-                                              "type": "float"
+                                              "type": "number"
                                           },
                                           "mean_score": {
                                               "description": "Mean Score",
-                                              "type": "float"
+                                              "type": "number"
                                           },
                                           "reading": {
                                               "description": "Manga Reading",
@@ -4493,6 +4493,6 @@ contents: >-
   }
 created: 1594725697850
 fileName: Jikan
-modified: 1595111109652
+modified: 1595236447607
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 type: ApiSpec
