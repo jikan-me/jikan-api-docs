@@ -1583,11 +1583,11 @@ contents: >-
                                                   },
                                                   "filler": {
                                                       "description": "Filler episode",
-                                                      "type": "bool"
+                                                      "type": "boolean"
                                                   },
                                                   "recap": {
                                                       "description": "Recap episode",
-                                                      "type": "bool"
+                                                      "type": "boolean"
                                                   },
                                                   "synopsis": {
                                                       "description": "Episode Synopsis",
@@ -2273,11 +2273,11 @@ contents: >-
                               },
                               "filler": {
                                   "description": "Filler episode",
-                                  "type": "bool"
+                                  "type": "boolean"
                               },
                               "recap": {
                                   "description": "Recap episode",
-                                  "type": "bool"
+                                  "type": "boolean"
                               },
                               "synopsis": {
                                   "description": "Episode Synopsis",
@@ -2395,7 +2395,7 @@ contents: >-
                       },
                       "airing": {
                           "description": "Airing boolean",
-                          "type": "bool"
+                          "type": "boolean"
                       },
                       "aired": {
                           "$ref": "#/components/schemas/daterange"
@@ -3152,7 +3152,7 @@ contents: >-
                           "type": "integer"
                       },
                       "has_next_page": {
-                          "type": "bool"
+                          "type": "boolean"
                       }
                   },
                   "type": "object"
@@ -3672,7 +3672,7 @@ contents: >-
                       },
                       "publishing": {
                           "description": "Publishing boolean",
-                          "type": "bool"
+                          "type": "boolean"
                       },
                       "published": {
                           "$ref": "#/components/schemas/daterange"
@@ -4493,6 +4493,6 @@ contents: >-
   }
 created: 1594725697850
 fileName: Jikan
-modified: 1595111109652
+modified: 1595236292002
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 type: ApiSpec
