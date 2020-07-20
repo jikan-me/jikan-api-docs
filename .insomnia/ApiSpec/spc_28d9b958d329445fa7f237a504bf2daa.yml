@@ -2418,7 +2418,8 @@ contents: >-
                       },
                       "score": {
                           "description": "Score",
-                          "type": "number"
+                          "type": "number",
+                          "format": "float"
                       },
                       "scored_by": {
                           "description": "Number of users",
@@ -2594,7 +2595,8 @@ contents: >-
                                           },
                                           "percentage": {
                                               "description": "Percentage of votes for this score",
-                                              "type": "number"
+                                              "type": "number",
+                                              "format": "float"
                                           }
                                       },
                                       "type": "object"
@@ -3679,7 +3681,8 @@ contents: >-
                       },
                       "score": {
                           "description": "Score",
-                          "type": "number"
+                          "type": "number",
+                          "format": "float"
                       },
                       "scored_by": {
                           "description": "Number of users",
@@ -3784,7 +3787,8 @@ contents: >-
                                           },
                                           "percentage": {
                                               "description": "Percentage of votes for this score",
-                                              "type": "number"
+                                              "type": "number",
+                                              "format": "float"
                                           }
                                       },
                                       "type": "object"
@@ -4181,11 +4185,13 @@ contents: >-
                                       "properties": {
                                           "days_watched": {
                                               "description": "Number of days spent watching Anime",
-                                              "type": "number"
+                                              "type": "number",
+                                              "format": "float"
                                           },
                                           "mean_score": {
                                               "description": "Mean Score",
-                                              "type": "number"
+                                              "type": "number",
+                                              "format": "float"
                                           },
                                           "watching": {
                                               "description": "Anime Watching",
@@ -4227,11 +4233,13 @@ contents: >-
                                       "properties": {
                                           "days_read": {
                                               "description": "Number of days spent reading Manga",
-                                              "type": "number"
+                                              "type": "number",
+                                              "format": "float"
                                           },
                                           "mean_score": {
                                               "description": "Mean Score",
-                                              "type": "number"
+                                              "type": "number",
+                                              "format": "float"
                                           },
                                           "reading": {
                                               "description": "Manga Reading",
@@ -4493,6 +4501,6 @@ contents: >-
   }
 created: 1594725697850
 fileName: Jikan
-modified: 1595236447607
+modified: 1595237741588
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 type: ApiSpec
