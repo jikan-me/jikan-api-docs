@@ -34,7 +34,9 @@ contents: >-
                           "description": "Returns anime resource",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime"
+                                  }
                               }
                           }
                       },
@@ -55,7 +57,9 @@ contents: >-
                           "description": "Returns anime characters resource",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime characters"
+                                  }
                               }
                           }
                       },
@@ -76,7 +80,9 @@ contents: >-
                           "description": "Returns anime staff resource",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime staff"
+                                  }
                               }
                           }
                       },
@@ -97,7 +103,9 @@ contents: >-
                           "description": "Returns a single anime episode resource",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime episode"
+                                  }
                               }
                           }
                       },
@@ -118,7 +126,9 @@ contents: >-
                           "description": "Returns a list of anime episodes",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime episodes"
+                                  }
                               }
                           }
                       },
@@ -139,7 +149,9 @@ contents: >-
                           "description": "Returns a list of anime news topics",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime news"
+                                  }
                               }
                           }
                       },
@@ -160,7 +172,9 @@ contents: >-
                           "description": "Returns a list of anime forum topics",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                     "$ref": "#/components/schemas/forum"
+                                  }
                               }
                           }
                       },
@@ -181,7 +195,9 @@ contents: >-
                           "description": "Returns a list of anime forum topics",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime videos"
+                                  }
                               }
                           }
                       },
@@ -202,7 +218,10 @@ contents: >-
                           "description": "Returns a list of anime forum topics",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                     # Currently "#/components/schemas/pictures" does not match what is returned by api at all
+                                     # "$ref": "#/components/schemas/pictures"
+                                  }
                               }
                           }
                       },
@@ -223,7 +242,9 @@ contents: >-
                           "description": "Returns anime statistics",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                     "$ref": "#/components/schemas/anime statistics"
+                                  }
                               }
                           }
                       },
@@ -244,7 +265,9 @@ contents: >-
                           "description": "Returns anime statistics",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                     "$ref": "#/components/schemas/moreinfo"
+                                  }
                               }
                           }
                       },
@@ -265,7 +288,9 @@ contents: >-
                           "description": "Returns anime recommendations",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/recommendations"
+                                  }
                               }
                           }
                       },
@@ -286,7 +311,9 @@ contents: >-
                           "description": "Returns anime recommendations",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime userupdates"
+                                  }
                               }
                           }
                       },
@@ -307,7 +334,9 @@ contents: >-
                           "description": "Returns anime reviews",
                           "content": {
                               "application/json": {
-                                  "schema": {}
+                                  "schema": {
+                                    "$ref": "#/components/schemas/anime reviews"
+                                  }
                               }
                           }
                       },
@@ -4493,6 +4522,6 @@ contents: >-
   }
 created: 1594725697850
 fileName: Jikan
-modified: 1595111109652
+modified: 1595235016073
 parentId: wrk_7a426ecef9bb4d2f971227e749458372
 type: ApiSpec
